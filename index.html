@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="s" href="">
+
+    <style>
+        body {
+            color: white;
+
+        }
+
+        .frame {
+            height: 100vh;
+            background-color: darkcyan;
+        }
+
+
+        .part {
+            display: grid;
+            grid-template-columns: 6fr 6fr 6fr;
+            height: 50vh;
+
+        }
+
+        .justify-content-around {
+            height: 50vh;
+            gap: 20px;
+
+
+        }
+
+        .input {
+            align-items: right;
+        }
+
+        .weather-info span {
+            margin-bottom: 15px;
+        }
+
+        .shadow {
+            min-width: 130px;
+        }
+    </style>
+</head>
+
+<body onload="GetInfo()">
+    <div class="frame">
+        <div class="part p-3">
+            <div>
+                <div>
+                    <span class="bi bi-geo-alt-fill"></span><span id="cityName" class="Location fs-2 ms-2"></span>
+                </div>
+
+                <div class="mt-5 ms-4">
+                    <br>
+                    <Span class="weather" id="daytd">...</Span>
+                </div>
+
+                <div class="mt-5">
+                    <span class="bi bi-thermometer-half fs-1">
+                        <class="c_t" id="c_t">Loading...
+                    </span><br>
+                    <span class="mt-3 ms-4">Feels like <Span>
+                            <class="f_l" id="f_l">...
+                        </Span></span>
+                </div>
+            </div>
+
+            <div>
+                <div class="text-center">
+                    <span class="d-block"><img src="dots.png" class="imgClass" id="img_t" width="60%" alt=""></span>
+                    <Span class="des_t fw-bolder fs-4" id="des_t">...</Span>
+                </div>
+            </div>
+
+            <div class="d-block weather-info mt-1">
+                <div class="input-group w-75 mb-4">
+                    <input class="form-control" type="text" value="LONDON" id="cityInput">
+                    <button type="button" onclick="GetInfo()" class="bi bi-search btn btn-warning">
+                    </button>
+                </div>
+
+                <div class="text-center">
+                    <span class="bi bi-droplet d-block">&#160<class="hu" id="hu">&#160 ...</span>
+                    <span class="bi bi-wind d-block">&#160<class="wind" id="wind">&#160 ...</span>
+                    <span class="bi bi-compass d-block">&#160<class="air" id="air">&#160 ...</span>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-around align-items-center container-fluid">
+            <div id="today" class="text-center bg-light text-dark border rounded-2 shadow ">
+                <Span class="weather" id="day1">...</Span>
+
+                <Span class="d-block"><img src="dots.png" class="imgClass" id="img1" width="30%" alt=""></Span>
+
+                <Span class="des_t1" id="des_t1">...</Span>
+                <Span class="d-block" id="dayt1">...</Span>
+            </div>
+
+            <div class="text-center bg-light text-dark border rounded-2 shadow ">
+                <Span class="weather" id="day2">...</Span>
+
+                <Span class="d-block"><img src="dots.png" class="imgClass" id="img2" width="30%" alt=""></Span>
+
+                <Span class="des_t2" id="des_t2">...</Span>
+                <Span class="d-block" id="dayt2">...</Span>
+
+            </div>
+
+            <div class="text-center bg-light text-dark border rounded-2 shadow ">
+
+                <Span class="weather" id="day3">...</Span>
+
+                <Span class="d-block"><img src="dots.png" class="imgClass" id="img3" width="30%" alt=""></Span>
+
+                <Span class="des_t3" id="des_t3">...</Span>
+                <Span class="d-block" id="dayt3">...</Span>
+            </div>
+
+            <div class="text-center bg-light text-dark border rounded-2 shadow ">
+                <Span class="weather" id="day4">...</Span>
+
+                <Span class="d-block"><img src="dots.png" class="imgClass" id="img4" width="30%" alt=""></Span>
+
+                <Span class="des_t4" id="des_t4">...</Span>
+                <Span class="d-block" id="dayt4">...</Span>
+
+            </div>
+
+            <div class="text-center bg-light text-dark border rounded-2 shadow ">
+                <Span class="weather" id="day5">...</Span>
+
+                <Span class="d-block"><img src="dots.png" class="imgClass" id="img5" width="30%" alt=""></Span>
+
+                <Span class="des_t5" id="des_t5">...</Span>
+                <Span class="d-block" id="dayt5">...</Span>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
